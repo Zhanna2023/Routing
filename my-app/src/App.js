@@ -1,4 +1,12 @@
-import { Routes, Route, NavLink, Outlet, useParams, useNavigate } from 'react-router-dom';
+import {
+	Routes,
+	Route,
+	NavLink,
+	Outlet,
+	useParams,
+	useNavigate,
+	Navigate,
+} from 'react-router-dom';
 import styles from './app.module.css';
 import { useEffect, useState } from 'react';
 
@@ -134,7 +142,8 @@ export const App = () => {
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/product-load-error" element={<ProductLoadError />} />
 				<Route path="/product-not-exist" element={<ProductNotFound />} />
-				<Route path="*" element={<NotFound />} />
+				<Route path="/404" element={<NotFound />} />
+				<Route path="*" element={<Navigate to="/404" replace={true} />} />
 			</Routes>
 		</div>
 	);
