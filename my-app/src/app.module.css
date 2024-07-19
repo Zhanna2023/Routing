@@ -1,7 +1,8 @@
-body {
-  background-color: rgb(127, 229, 255);
+.app {
+	background-color: rgb(127, 229, 255);
+	text-align: center;
 }
 
-.App {
-  text-align: center;
+:global .active {
+	text-decoration: none;
 }
